@@ -25,6 +25,20 @@
   <map:flow language="javascript"/>
 
   <map:pipelines>
+
+    <map:pipeline id="test">
+      <map:match pattern="moo/*/*">
+        <map:generate src="http://dos.heuristscholar.org/heurist/php/hml.php?q=ids:{1}&amp;depth=2"/>
+        <map:transform src="xsl/heurist_legacy_xml.xsl"/>
+        <map:transform src="xsl/item_view.xsl" label="transformed">
+          <map:parameter name="use-request-parameters" value="true"/>
+          <map:parameter name="id" value="{1}"/>
+          <map:parameter name="related_reftype_filter" value="{2}"/>
+        </map:transform>
+        <map:serialize type="html"/>
+      </map:match>
+    </map:pipeline>
+
     <!--+
         | Demo pipelines
         +-->
