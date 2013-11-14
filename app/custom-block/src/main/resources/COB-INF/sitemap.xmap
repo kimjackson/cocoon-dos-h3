@@ -27,6 +27,7 @@
   <map:pipelines>
 
     <map:pipeline id="test">
+
       <map:match pattern="moo/*/*">
         <map:generate src="http://dos.heuristscholar.org/heurist/php/hml.php?q=ids:{1}&amp;depth=2"/>
         <map:transform src="xsl/heurist_legacy_xml.xsl"/>
@@ -37,6 +38,25 @@
         </map:transform>
         <map:serialize type="html"/>
       </map:match>
+
+      <map:match pattern="foo/*/*">
+        <map:generate src="http://ec2-54-252-241-44.ap-southeast-2.compute.amazonaws.com/h3/export/xml/hml.php?q=ids:{1}&amp;depth=2"/>
+        <map:transform src="xsl/h3-to-h2-record-and-detail-types.xsl"/>
+        <map:transform src="xsl/heurist_legacy_xml.xsl"/>
+        <map:transform src="xsl/item_view.xsl" label="transformed">
+          <map:parameter name="use-request-parameters" value="true"/>
+          <map:parameter name="id" value="{1}"/>
+          <map:parameter name="related_reftype_filter" value="{2}"/>
+        </map:transform>
+        <map:serialize type="html"/>
+      </map:match>
+
+      <map:match pattern="goo/*/*">
+        <map:generate src="http://ec2-54-252-241-44.ap-southeast-2.compute.amazonaws.com/h3/export/xml/hml.php?q=ids:{1}&amp;depth=2"/>
+        <map:transform src="xsl/h3-to-h2-record-and-detail-types.xsl"/>
+        <map:serialize type="xml"/>
+      </map:match>
+
     </map:pipeline>
 
     <!--+
