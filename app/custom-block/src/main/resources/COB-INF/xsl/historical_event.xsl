@@ -66,8 +66,8 @@
 			</xsl:attribute>
 		</xsl:element>
 		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAGZugEZOePOFa_Kc5QZ0UQRQUeYPJPN0iHdI_mpOIQDTyJGt-ARSOyMjfz0UjulQTRjpuNpjk72vQ3w"></script>
-		<script src="{$hbase}/mapper/epoly.js"></script>
-		<script src="{$hbase}/mapper/mapper.js"></script>
+		<script src="{$hbase}/viewers/map/epoly.js"></script>
+		<script src="{$hbase}/viewers/map/loadGMap.js"></script>
 
 		<script>
 			loadMap( { compact: true, highlight: [<xsl:value-of select="id"/>], onclick: function(record) { window.location = "<xsl:value-of select="$cocoonbase"/>/item/"+record.bibID+"/51?flavour=<xsl:value-of select="$flavour"/>"; } } );
