@@ -671,7 +671,7 @@
 							<!-- <xsl:value-of select="export/references/reference[1]/title"/> -->
 							 <span style="padding-right:5px; vertical-align:top">
 							 	<a  href="#" onclick="window.open('{$urlbase}/edit.html?id={export/references/reference/id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false; " title="Edit main record">
-								 <img src="{$hbase}/img/edit-pencil.gif"  style="vertical-align: top;"/></a>
+								 <img src="{$hbase}/common/images/edit-pencil.png"  style="vertical-align: top;"/></a>
 							 </span>
 
 							<xsl:value-of select="export/references/reference[1]/title"/>
@@ -871,7 +871,7 @@
 						<a href="{$urlbase}/edit.html?id={id}"
 							onclick="window.open(this.href,'','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;"
 							title="edit">
-						<img src="{$hbase}/img/edit-pencil.gif"/>
+						<img src="{$hbase}/common/images/edit-pencil.png"/>
 						</a>
 						<a href="{$cocoonbase}/item/{id}" class="sb_two">
 							<xsl:choose>

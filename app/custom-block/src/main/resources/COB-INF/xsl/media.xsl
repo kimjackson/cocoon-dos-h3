@@ -36,7 +36,7 @@
 						<a href="{$urlbase}/edit.html?id={id}"
 							onclick="window.open(this.href,'','status=0,scrollbars=yes,resizable=1,width=800,height=600'); return false;"
 							title="edit">
-						<img src="{$hbase}/img/edit-pencil.gif"/>
+						<img src="{$hbase}/common/images/edit-pencil.png"/>
 						</a>
 						<a href="{$cocoonbase}/item/{id}" class="sb_two">
 							<xsl:value-of select="detail[@id=291]"/>

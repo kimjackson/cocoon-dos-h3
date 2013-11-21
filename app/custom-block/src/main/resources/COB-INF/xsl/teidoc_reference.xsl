@@ -28,7 +28,7 @@
 						<a href="{$urlbase}/edit-annotation.html?id={id}"
 							onclick="window.open(this.href,'','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;"
 							title="edit">
-							<img src="{$hbase}/img/edit-pencil.gif"/>
+							<img src="{$hbase}/common/images/edit-pencil.png"/>
 						</a>
 						<xsl:choose>
 							<xsl:when test="../id = pointer[@id=322]/id">
