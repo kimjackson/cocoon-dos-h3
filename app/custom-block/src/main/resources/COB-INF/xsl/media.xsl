@@ -46,7 +46,7 @@
 					</xsl:element>
 					<td align="right">
 						<!-- change this to pick up the actuall system name of the reftye or to use the mapping method as in JHSB that calls human-readable-names.xml -->
-						<img style="vertical-align: middle;horizontal-align: middle" src="{$hbase}/img/reftype/{reftype/@id}.gif"/>
+						<img style="vertical-align: middle;horizontal-align: middle" src="{$urlbase}/images/{reftype/@id}.gif"/>
 					</td>
 				</tr>
 			</xsl:otherwise>

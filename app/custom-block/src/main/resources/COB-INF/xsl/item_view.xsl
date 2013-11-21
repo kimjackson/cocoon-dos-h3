@@ -895,7 +895,7 @@
 					<td align="right">
 						<!-- change this to pick up the actuall system name of the reftye or to use the mapping method as in JHSB that calls human-readable-names.xml -->
 						<img style="vertical-align: middle;horizontal-align: right"
-							src="{$hbase}/img/reftype/{reftype/@id}.gif"/>
+							src="{$urlbase}/images/{reftype/@id}.gif"/>
 					</td>
 				</tr>
 			</xsl:otherwise>
@@ -913,7 +913,7 @@
 			<tr>
 				<td colspan="2">
 					<img style="vertical-align: middle;"
-						src="{$hbase}/img/reftype/{reftype/@id}.gif"/>
+						src="{$urlbase}/images/{reftype/@id}.gif"/>
 					<xsl:text> </xsl:text>
 					<xsl:value-of select="reftype"/>
 				</td>
