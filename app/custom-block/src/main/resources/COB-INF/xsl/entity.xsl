@@ -260,7 +260,7 @@
 						</script>
 						<!-- yes you do need this -->
 						<xsl:element name="script">
-							<xsl:attribute name="src"><xsl:value-of select="$hbase"/>/mapper/tmap-data.php?w=all&amp;q=id:<xsl:value-of select="id"/>
+							<xsl:attribute name="src"><xsl:value-of select="$hbase"/>/viewers/map/getTMapDataFromQuery.php?w=all&amp;q=id:<xsl:value-of select="id"/>
 								<xsl:for-each select="related">
 									<xsl:text>,</xsl:text>
 									<xsl:value-of select="id"/>
