@@ -550,7 +550,7 @@
 					top.HEURIST = {};
 					top.HEURIST.fireEvent = function(e, e){};
 				</script>
-				<script src="http://dos.heuristscholar.org/heurist/php/js/heurist-obj-user.php"></script>
+				<!--script src="http://dos.heuristscholar.org/heurist/php/js/heurist-obj-user.php"></script-->
 
 			</head>
 			<body pub_id="{/export/@pub_id}"  >
