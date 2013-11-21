@@ -68,7 +68,7 @@
         <map:serialize type="html"/>
       </map:match>
 
-      <map:match pattern="foo/*/*">
+      <map:match pattern="item/*/*">
         <map:generate src="http://ec2-54-206-45-164.ap-southeast-2.compute.amazonaws.com/h3/export/xml/hml.php?q=ids:{1}&amp;depth=2" label="h3hml"/>
         <map:transform src="xsl/h3-to-h2-record-and-detail-types.xsl" label="h2hml"/>
         <map:transform src="xsl/heurist_legacy_xml.xsl"/>
