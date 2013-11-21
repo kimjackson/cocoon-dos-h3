@@ -8,7 +8,7 @@
 	<xsl:param name="related_reftype_filter"/>
 	<xsl:param name="flavour"/>
 
-	<xsl:variable name="hbase">http://dos.heuristscholar.org/heurist</xsl:variable>
+	<xsl:variable name="hbase">/h3</xsl:variable>
 	<xsl:variable name="urlbase">/dos</xsl:variable>
 	<xsl:variable name="cocoonbase">/cocoon/dos/browser</xsl:variable>
 
@@ -470,8 +470,8 @@
 				<!-- text and table styling -->
 
 				<script>
-					var pathDos = "http://heuristscholar.org/cocoon/dos/browser/item/";
-					var imgpath = "http://heuristscholar.org/dos/img/reftype/";
+					var pathDos = "/cocoon/dos/browser/item/";
+					var imgpath = "/dos/img/reftype/";
 
 					function showFootnote(recordID) {
 						document.getElementById("page").style.bottom = "205px";
@@ -539,10 +539,10 @@
 
 				</script>
 
-				<script src="http://hapi.heuristscholar.org/load?instance=dos&amp;key=1742ecefd4811cfde65b604f730363fe7a86bb45"></script>
+				<script src="/h3/hapi/hapiLoader.php"></script>
 				<script>
 					if (!HCurrentUser.isLoggedIn()) {
-						window.location = 'http://dos.heuristscholar.org/heurist/php/login-vanilla.php?logo=http://heuristscholar.org/dos/images/logo.png&amp;home=http://heuristscholar.org/dos';
+						window.location = '/h3/common/connect/login.php?last_uri=' + window.location;
 					}
 				</script>
 				<script src="{$urlbase}/js/search.js"/>
@@ -617,8 +617,7 @@
 						<script type="text/javascript">
 
 							var a = document.createElement("a");
-							a.href ='http://dos.heuristscholar.org/heurist/php/login-vanilla.php?logo=http://heuristscholar.org/dos/img/logo.png&amp;home=http://heuristscholar.org/dos';
-
+							a.href = '/h3/common/connect/login.php?last_uri=' + window.location;
 
 							if (HCurrentUser.isLoggedIn()) {
 								document.getElementById("login").appendChild(document.createTextNode(HCurrentUser.getRealName() + " : "));
@@ -631,7 +630,7 @@
 							document.getElementById("login").appendChild(a);
 
 						</script>
-						</td><td id="heurist-link"><a href="http://dos.heuristscholar.org/heurist/">Heurist</a></td></tr>
+						</td><td id="heurist-link"><a href="/h3">Heurist</a></td></tr>
 						</table>
 					</div>
 
