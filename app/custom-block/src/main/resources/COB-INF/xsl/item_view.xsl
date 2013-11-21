@@ -558,10 +558,10 @@
 
 
 				<div id="header">
-					<iframe
+					<!--iframe
 						src="{$cocoonbase}/breadcrumbs?flavour={$flavour}&amp;title={export/references/reference/title}&amp;url=http://heuristscholar.org{$cocoonbase}/item/{$id}/{$related_reftype_filter}%3Fflavour={$flavour}"
 						style="width: 100%; height: 100%; border: none; overflow: visible;"
-						frameborder="0" allowtransparency="true"/>
+						frameborder="0" allowtransparency="true"/-->
 
 					<div id="logo">
 						<a href="{$urlbase}/index.html"><img src="{$urlbase}/images/logo.png" align="center"/></a>
