@@ -24,6 +24,32 @@
       +-->
   <map:flow language="javascript"/>
 
+  <map:views>
+    <map:view name="h3hml" from-label="h3hml">
+      <map:serialize type="xml"/>
+    </map:view>
+    <map:view name="h2hml" from-label="h2hml">
+      <map:serialize type="xml"/>
+    </map:view>
+    <map:view name="transformed" from-label="transformed">
+      <map:serialize type="xml"/>
+    </map:view>
+    <map:view name="xinclude" from-label="xinclude">
+      <map:serialize type="xml"/>
+    </map:view>
+    <map:view name="wordmltotei" from-label="wordmltotei">
+      <map:transform src="xsl/tei_only.xsl"/>
+      <map:serialize type="xml"/>
+    </map:view>
+    <map:view name="tei" from-label="tei">
+      <map:serialize type="xml"/>
+    </map:view>
+    <map:view name="rawkml" from-label="rawkml">
+      <map:serialize type="xml"/>
+    </map:view>
+  </map:views>
+
+
   <map:pipelines>
 
     <map:pipeline id="test">
@@ -36,18 +62,24 @@
           <map:parameter name="id" value="{1}"/>
           <map:parameter name="related_reftype_filter" value="{2}"/>
         </map:transform>
+        <map:transform type="xinclude" label="xinclude"/>
+        <map:transform src="xsl/wordml2TEI.xsl" label="wordmltotei"/>
+        <map:transform src="xsl/tei_to_html_basic.xsl" label="tei"/>
         <map:serialize type="html"/>
       </map:match>
 
       <map:match pattern="foo/*/*">
-        <map:generate src="http://ec2-54-252-241-44.ap-southeast-2.compute.amazonaws.com/h3/export/xml/hml.php?q=ids:{1}&amp;depth=2"/>
-        <map:transform src="xsl/h3-to-h2-record-and-detail-types.xsl"/>
+        <map:generate src="http://ec2-54-206-45-164.ap-southeast-2.compute.amazonaws.com/h3/export/xml/hml.php?q=ids:{1}&amp;depth=2" label="h3hml"/>
+        <map:transform src="xsl/h3-to-h2-record-and-detail-types.xsl" label="h2hml"/>
         <map:transform src="xsl/heurist_legacy_xml.xsl"/>
         <map:transform src="xsl/item_view.xsl" label="transformed">
           <map:parameter name="use-request-parameters" value="true"/>
           <map:parameter name="id" value="{1}"/>
           <map:parameter name="related_reftype_filter" value="{2}"/>
         </map:transform>
+        <map:transform type="xinclude" label="xinclude"/>
+        <map:transform src="xsl/wordml2TEI.xsl" label="wordmltotei"/>
+        <map:transform src="xsl/tei_to_html_basic.xsl" label="tei"/>
         <map:serialize type="html"/>
       </map:match>
 
