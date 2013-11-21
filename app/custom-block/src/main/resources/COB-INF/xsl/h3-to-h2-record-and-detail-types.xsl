@@ -27,7 +27,7 @@
         <type id="{$id}" h3id="{@id}"><xsl:value-of select="."/></type>
     </xsl:template>
 
-    <xsl:template match="record/detail">
+    <xsl:template match="record/detail | record/reversePointer">
         <xsl:variable name="id">
             <xsl:if test="@id='1'">160</xsl:if>
             <xsl:if test="@id='2'">173</xsl:if>
@@ -83,7 +83,12 @@
             <xsl:if test="@id='95'">591</xsl:if>
             <xsl:if test="@id='97'">179</xsl:if>
         </xsl:variable>
-        <detail id="{$id}" h3id="{@id}" type="{@type}" name="{@name}"><xsl:apply-templates/></detail>
+        <xsl:if test="name() = 'detail'">
+            <detail id="{$id}" h3id="{@id}" type="{@type}" name="{@name}"><xsl:apply-templates/></detail>
+        </xsl:if>
+        <xsl:if test="name() = 'reversePointer'">
+            <reversePointer id="{$id}" h3id="{@id}" type="{@type}" name="{@name}"><xsl:apply-templates/></reversePointer>
+        </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>
