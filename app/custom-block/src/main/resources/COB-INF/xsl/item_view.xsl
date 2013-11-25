@@ -499,8 +499,8 @@
 
 					function annotation_loaded(record) {
 				        var elts = document.getElementById("footnotes-inner");
-						var notes = record.getDetail(HDetailManager.getDetailTypeById(303));
-						var val = record.getDetail(HDetailManager.getDetailTypeById(199));
+						var notes = record.getDetail(HDetailManager.getDetailTypeById(top.HEURIST.magicNumbers['DT_SHORT_SUMMARY']));
+						var val = record.getDetail(HDetailManager.getDetailTypeById(top.HEURIST.magicNumbers['DT_TARGET_RESOURCE']));
 						if (val) {
 							HeuristScholarDB.loadRecords(new HSearch("id:"+val.getID()),
                                   new HLoader(function(s,r){MM_loaded(r[0],record)})
@@ -517,10 +517,10 @@
 				   function MM_loaded(val,record) {
 				        var elts = document.getElementById("footnotes-inner");
 
-						var title = val.getDetail(HDetailManager.getDetailTypeById(160));
-						var notes = val.getDetail(HDetailManager.getDetailTypeById(303));
-						var start = val.getDetail(HDetailManager.getDetailTypeById(177));
-						var finish = val.getDetail(HDetailManager.getDetailTypeById(178));
+						var title = val.getDetail(HDetailManager.getDetailTypeById(top.HEURIST.magicNumbers['DT_NAME']));
+						var notes = val.getDetail(HDetailManager.getDetailTypeById(top.HEURIST.magicNumbers['DT_SHORT_SUMMARY']));
+						var start = val.getDetail(HDetailManager.getDetailTypeById(top.HEURIST.magicNumbers['DT_START_DATE']));
+						var finish = val.getDetail(HDetailManager.getDetailTypeById(top.HEURIST.magicNumbers['DT_END_DATE']));
 
 						elts.innerHTML += "&lt;p&gt;" + title + "&lt;/p&gt;";
 						if (notes) {
@@ -528,8 +528,8 @@
 						}
 						elts.innerHTML += "&lt;p&gt;" + start + (finish ? " - " + finish : "") + "&lt;/p&gt;";
 
-						if (val.getRecordType().getID() == 74) {
-							var img=val.getDetail(HDetailManager.getDetailTypeById(221)). getThumbnailURL() + "&amp;w=400";
+						if (val.getRecordType().getID() == top.HEURIST.magicNumbers['RT_MEDIA_RECORD']) {
+							var img='/h3/common/php/resizeImage.php?w=400&amp;ulf_ID=' + val.getDetail(HDetailManager.getDetailTypeById(top.HEURIST.magicNumbers['DT_FILE_RESOURCE'])).getID();
 							elts.innerHTML += "&lt;br&gt;&lt;a href=\""+pathDos+val.getID()+"\"&gt;&lt;img src=\"" + img+ "\"/&gt;&lt;/a&gt;";
 						}
 						else {
