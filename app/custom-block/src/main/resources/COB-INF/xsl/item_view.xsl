@@ -907,7 +907,7 @@
 	<!-- fall-back template for any reference types that aren't already handled -->
 	<xsl:template match="reference">
 		<xsl:if test="detail[@id=221]">
-			<img src="{detail[@id=221]/file_thumb_url}&amp;w=400"/>
+			<img src="{$hbase}/common/php/resizeImage.php?ulf_ID={detail/file_id}&amp;w=400"/>
 		</xsl:if>
 		<table>
 			<tr>

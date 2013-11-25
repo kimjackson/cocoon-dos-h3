@@ -94,7 +94,7 @@
 					<br/>
 					<xsl:if test="detail[@id=221]">
 						<div align="center"><a href="{detail/file_fetch_url}" target="_top">
-							<img src="{detail/file_thumb_url}&amp;w=560" border="1"/>
+							<img src="{$hbase}/common/php/resizeImage.php?ulf_ID={detail/file_id}&amp;w=560" border="1"/>
 						</a></div>
 						<br/>
 						<!-- xsl:value-of select="detail/file_fetch_url"/ -->
