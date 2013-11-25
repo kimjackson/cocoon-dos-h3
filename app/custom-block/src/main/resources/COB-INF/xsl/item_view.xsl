@@ -547,7 +547,9 @@
 				</script>
 				<script src="{$urlbase}/js/search.js"/>
 				<script>
-					top.HEURIST = {};
+					if (! top.HEURIST) {
+						top.HEURIST = {};
+					}
 					top.HEURIST.fireEvent = function(e, e){};
 				</script>
 				<!--script src="http://dos.heuristscholar.org/heurist/php/js/heurist-obj-user.php"></script-->
@@ -724,7 +726,7 @@
 		<div id= "saved-searches">
 			<div id = "saved-searches-header"></div>
 			<script>
-			if (HCurrentUser.isLoggedIn()) {
+			if (HCurrentUser.isLoggedIn() &amp;&amp; top.HEURIST.user) {
 				var savedSearches = top.HEURIST.user.workgroupSavedSearches["2"];
 				document.getElementById("saved-searches-header").innerHTML = "Saved Searches";
 				for (i in savedSearches) {
