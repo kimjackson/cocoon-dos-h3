@@ -31,6 +31,9 @@
     <map:view name="h2hml" from-label="h2hml">
       <map:serialize type="xml"/>
     </map:view>
+    <map:view name="legacy" from-label="legacy">
+      <map:serialize type="xml"/>
+    </map:view>
     <map:view name="transformed" from-label="transformed">
       <map:serialize type="xml"/>
     </map:view>
@@ -71,7 +74,7 @@
       <map:match pattern="item/*/*">
         <map:generate src="http://ec2-54-206-45-164.ap-southeast-2.compute.amazonaws.com/h3/export/xml/hml.php?q=ids:{1}&amp;depth=2" label="h3hml"/>
         <map:transform src="xsl/h3-to-h2-record-and-detail-types.xsl" label="h2hml"/>
-        <map:transform src="xsl/heurist_legacy_xml.xsl"/>
+        <map:transform src="xsl/heurist_legacy_xml.xsl" label="legacy"/>
         <map:transform src="xsl/item_view.xsl" label="transformed">
           <map:parameter name="use-request-parameters" value="true"/>
           <map:parameter name="id" value="{1}"/>
