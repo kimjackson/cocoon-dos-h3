@@ -48,7 +48,7 @@
 									<xsl:value-of select="pointer[@id=322]/title"/>
 								</em>
 								<img style="vertical-align: middle;horizontal-align: right"
-									src="{$urlbase}/images/{pointer[@id=322]/reftype/@id}.gif"/>)
+									src="{$urlbase}/images/types/old/{pointer[@id=322]/reftype/@id}.gif"/>)
 							</xsl:otherwise>
 						</xsl:choose>
 
@@ -111,7 +111,7 @@
 												<!-- change this to pick up the actuall system name of the reftye or to use the mapping method as in JHSB that calls human-readable-names.xml -->
 												<img
 												style="vertical-align: middle;horizontal-align: right"
-												src="{$urlbase}/images/{pointer[@id=152]/reftype/@id}.gif"
+												src="{$urlbase}/images/types/old/{pointer[@id=152]/reftype/@id}.gif"
 												/>
 											</td>
 										</tr>
