@@ -54,7 +54,7 @@
 					<td align="right">
 						<!-- change this to pick up the actuall system name of the reftye or to use the mapping method as in JHSB that calls human-readable-names.xml -->
 						<img style="vertical-align: middle;horizontal-align: right"
-							src="{$urlbase}/images/{reftype/@id}.gif"/>
+							src="{$urlbase}/images/types/old/{reftype/@id}.gif"/>
 					</td>
 
 				</tr>
