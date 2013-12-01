@@ -128,7 +128,7 @@
 							document.getElementById("login").appendChild(a);
 
 						</script>
-						</td><td id="heurist-link"><a href="/h3">Heurist</a></td></tr>
+						</td><td id="heurist-link"><a href="/h3/search/search.html?ver=1&w=all&q=tag:favourites">Heurist</a></td></tr>
 						</table>
 					</div>
 
