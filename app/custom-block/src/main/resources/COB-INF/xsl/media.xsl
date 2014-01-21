@@ -33,7 +33,7 @@
 							</a>
 							<br/>
 						</xsl:if>
-						<a href="{$urlbase}/edit.html?id={id}"
+						<a href="{$hbase}/records/edit/editRecord.html?recID={id}"
 							onclick="window.open(this.href,'','status=0,scrollbars=yes,resizable=1,width=800,height=600'); return false;"
 							title="edit">
 						<img src="{$hbase}/common/images/edit-pencil.png"/>

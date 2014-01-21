@@ -168,7 +168,7 @@
 						<h1>
 							<!-- <xsl:value-of select="export/references/reference[1]/title"/> -->
 							 <span style="padding-right:5px; vertical-align:top">
-							 	<a  href="#" onclick="window.open('{$urlbase}/edit.html?id={export/references/reference/id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false; " title="Edit main record">
+							 	<a  href="#" onclick="window.open('{$hbase}/records/edit/editRecord.html?recID={export/references/reference/id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false; " title="Edit main record">
 								 <img src="{$hbase}/common/images/edit-pencil.png"  style="vertical-align: top;"/></a>
 							 </span>
 
@@ -366,7 +366,7 @@
 
 							</xsl:if>
 						</xsl:if>
-						<a href="{$urlbase}/edit.html?id={id}"
+						<a href="{$hbase}/records/edit/editRecord.html?recID={id}"
 							onclick="window.open(this.href,'','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;"
 							title="edit">
 						<img src="{$hbase}/common/images/edit-pencil.png"/>

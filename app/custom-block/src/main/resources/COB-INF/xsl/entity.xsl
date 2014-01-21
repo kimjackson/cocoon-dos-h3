@@ -38,7 +38,7 @@
 							</a>
 							<br/>
 						</xsl:if>
-						<a href="{$urlbase}/edit.html?id={id}"
+						<a href="{$hbase}/records/edit/editRecord.html?recID={id}"
 							onclick="window.open(this.href,'','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;"
 							title="edit">
 						<img src="{$hbase}/common/images/edit-pencil.png"/>
@@ -79,7 +79,7 @@
 					<td colspan="2">
 					     <h1>
 							 <span style="padding-right:5px; vertical-align:top">
-								 <a  href="#" onclick="window.open('{$urlbase}/edit.html?id={id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); " title="Edit main record">
+								 <a  href="#" onclick="window.open('{$hbase}/records/edit/editRecord.html?recID={id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); " title="Edit main record">
 								 <img src="{$hbase}/common/images/edit-pencil.png"  style="vertical-align: top;"/></a>
 							 </span>
 							<xsl:value-of select="detail[@id=160]"/>
@@ -183,7 +183,7 @@
 		<xsl:param name="matches"/>
 		<tr>
 			<td><!-- Type -->
-				<a href="{$urlbase}/edit.html?id={id}"
+				<a href="{$hbase}/records/edit/editRecord.html?recID={id}"
 					onclick="window.open(this.href,'','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;"
 					title="edit">
 					<img src="{$hbase}/common/images/edit-pencil.png"/>
