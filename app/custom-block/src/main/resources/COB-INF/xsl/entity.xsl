@@ -159,7 +159,7 @@
 				 <xsl:element name="td">
 					<input type="button"
 					class="add-annotation-button"
-					onclick="window.open('{$urlbase}/edit.html?typeId=150&amp;source={id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;"
+					onclick="window.open('{$urlbase}/edit.html?typeId=26&amp;source={id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;"
 					value="add factoid"/>
 				 </xsl:element>
 			</tr>

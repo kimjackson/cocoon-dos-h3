@@ -86,7 +86,7 @@
 									<td style="font-size: 85%;padding-right:10px;"><a  href='#' onclick="window.open('{$urlbase}/edit-annotation.html?refid={export/references/reference/id}&amp;type=glossary','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;" title="add Glossary annotation"><img src='{$urlbase}/images/glossary1.gif'  align="absmiddle"/></a> Gloss</td>
 								
 									
-									<td style="font-size: 85%;padding-right:10px;"><a  href='#' onclick="window.open('{$urlbase}/addrelationship.html?typeId=52&amp;source={export/references/reference/id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;" title="add Relationship"><img src='{$urlbase}/images/types/old/52.gif'  align="absmiddle"/></a> Relationship</td>
+									<td style="font-size: 85%;padding-right:10px;"><a  href='#' onclick="window.open('{$urlbase}/addrelationship.html?typeId=1&amp;source={export/references/reference/id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;" title="add Relationship"><img src='{$urlbase}/images/types/old/52.gif'  align="absmiddle"/></a> Relationship</td>
 
 								</xsl:if>
 								<xsl:if test=" $id = 2674">
@@ -102,7 +102,7 @@
 							<xsl:if test="export/references/reference/reftype/@id = 74 or export/references/reference/reftype/@id  = 151 or export/references/reference/reftype/@id  = 152 ">
 								<table>
 									<tr>
-								<td style="font-size: 85%;padding-right:10px;"><a  href='#' onclick="window.open('{$urlbase}/addrelationship.html?typeId=52&amp;source={export/references/reference/id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;" title="add Relationship"><img src='{$urlbase}/images/types/old/52.gif'  align="absmiddle"/></a> Relationship</td>
+								<td style="font-size: 85%;padding-right:10px;"><a  href='#' onclick="window.open('{$urlbase}/addrelationship.html?typeId=1&amp;source={export/references/reference/id}','','status=0,scrollbars=1,resizable=1,width=800,height=600'); return false;" title="add Relationship"><img src='{$urlbase}/images/types/old/52.gif'  align="absmiddle"/></a> Relationship</td>
 									</tr>
 								</table>
 							</xsl:if>
