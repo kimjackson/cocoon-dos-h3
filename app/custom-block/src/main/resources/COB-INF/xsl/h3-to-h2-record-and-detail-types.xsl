@@ -84,7 +84,7 @@
             <xsl:if test="@id='97'">179</xsl:if>
         </xsl:variable>
         <xsl:if test="name() = 'detail'">
-            <detail id="{$id}" h3id="{@id}" type="{@type}" name="{@name}"><xsl:apply-templates/></detail>
+            <detail id="{$id}" h3id="{@id}" type="{@type}" name="{@name}" inverse="{@inverse}"><xsl:apply-templates/></detail>
         </xsl:if>
         <xsl:if test="name() = 'reversePointer'">
             <reversePointer id="{$id}" h3id="{@id}" type="{@type}" name="{@name}"><xsl:apply-templates/></reversePointer>
