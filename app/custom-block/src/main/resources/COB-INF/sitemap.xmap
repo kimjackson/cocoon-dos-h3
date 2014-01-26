@@ -52,8 +52,25 @@
     </map:view>
   </map:views>
 
+  <map:components>
+    <map:selectors>
+      <map:selector name="exception" src="org.apache.cocoon.selection.ExceptionSelector">
+        <exception name="processing" class="org.apache.cocoon.ProcessingException" unroll="true"/>
+        <exception name="sax" class="org.xml.sax.SAXParseException"/>
+      </map:selector>
+    </map:selectors>
+  </map:components>
 
   <map:pipelines>
+
+    <map:handle-errors>
+      <map:select type="exception">
+        <map:when test="sax">
+          <map:generate src="error.xml"/>
+          <map:serialize type="html"/>
+        </map:when>
+      </map:select>
+    </map:handle-errors>
 
     <map:pipeline id="test">
 
@@ -91,7 +108,7 @@
       </map:match>
 
       <map:match pattern="item/*">
-	    <map:redirect-to uri="{1}/"/>
+        <map:redirect-to uri="{1}/"/>
       </map:match>
 
       <!--map:match pattern="breadcrumbs/xml">
