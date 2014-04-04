@@ -55,6 +55,9 @@
 					<xsl:when test="detail[@id=202]/record/id = ../../id">
 						<xsl:value-of select="detail[@id=200]"/>
 					</xsl:when>
+					<xsl:when test="normalize-space(detail[@id=202]) = ../../id">
+						<xsl:value-of select="detail[@id=200]"/>
+					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="detail[@id=200]/@inverse"/>
 					</xsl:otherwise>
